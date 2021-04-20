@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Border Radius Previewer</title>
+        <link rel="stylesheet" href="../css/style2.css" />
+        <script src="../js/changeborder.js"></script>
+        <script src="../js/resetconfig.js"></script>
+        <script src="../js/copytoclipboard.js"></script>
+    </head>
+    <body>
+        <span id="result"></span>
+        <div id="border-radius"></div>
+        <div id="grid-inputs">
+            <div class="flex-input">
+                <label class="label-input">Top Left Border Radius</label>
+                <input type="text" id="border-top-left-radius" />
+            </div>
+            <div class="flex-input">
+                <label class="label-input">Top Right Border Radius</label>
+                <input type="text" id="border-top-right-radius" />
+            </div>
+            <div class="flex-input">
+                <label class="label-input">Bottom Right Border Radius</label>
+                <input type="text" id="border-bottom-right-radius" />
+            </div>
+            <div class="flex-input">
+                <label class="label-input">Bottom Left Border Radius</label>
+                <input type="text" id="border-bottom-left-radius" />
+            </div>
+        </div>
+        <div id="grid-commands">
+            <textarea id="code-css" disabled></textarea>
+            <div id="box-select-copy">
+                <select id="unities">
+                    <option value="px">px</option>
+                    <option value="%">%</option>
+                </select>
+                <input type="button" value="Copy" id="copy-button" onclick="copyToClipboard()"/>
+            </div>
+            <input type="button" value="Apply" class="button" onclick="apply()" />
+            <input type="button" value="Reset" class="button" onclick="reset()" />
+        </div>
+    </body>
+</html>     
